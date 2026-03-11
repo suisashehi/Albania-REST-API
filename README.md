@@ -1,43 +1,47 @@
-# sv
+# Albania REST API
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This project is a **REST API built with SvelteKit** that provides information about locations in Albania (e.g. lakes, cities, mountains).
 
-## Creating a project
+The API returns data in **JSON format** and follows standard **REST principles** with correct HTTP methods and status codes.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```sh
-# create a new project
-npx sv create my-app
-```
+- Public **GET endpoints**
+- Protected **POST, PUT and DELETE endpoints**
+- **Basic Authentication** for write operations
+- Proper **HTTP status codes**
+- Tested using **Postman**
 
-To recreate this project with the same configuration:
+## Endpoints
 
-```sh
-# recreate this project
-npx sv@0.12.5 create --template minimal --no-types --add prettier eslint --install npm .
-```
+### Public
+- `GET /api/lakes` – Get all lakes  
+- `GET /api/lakes/:id` – Get a specific lake
 
-## Developing
+### Protected (Basic Auth required)
+- `POST /api/lakes` – Create a new lake
+- `PUT /api/lakes/:id` – Update a lake
+- `DELETE /api/lakes/:id` – Delete a lake
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Data Model
 
-```sh
-npm run dev
+Each lake contains:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- `id`
+- `name`
+- `location`
+- `type`
+- `area_km2`
+- `max_depth_m`
 
-## Building
+Example:
 
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-# Albania-REST-API
+```json
+{
+  "id": 1,
+  "name": "Lake Shkodra",
+  "location": "Shkoder",
+  "type": "natural",
+  "area_km2": 370,
+  "max_depth_m": 44
+}
