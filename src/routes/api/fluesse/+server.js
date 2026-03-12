@@ -9,3 +9,8 @@ function checkAuth(request) {
     const [user, pass] = decoded.split(':');
     return user === API_USER && pass === API_PASS;
 }
+
+export async function GET() {
+    const [rows] = await pool.query('SELECT * FROM Fluesse');
+    return Response.json(rows, { status: 200 });
+}
