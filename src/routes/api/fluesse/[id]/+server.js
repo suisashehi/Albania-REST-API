@@ -37,3 +37,15 @@ export async function PUT({ params, request }) {
     }
     return Response.json({ message: 'River updated' }, { status: 200 });
 }
+
+export async function DELETE({ params, request }) {
+    if (!checkAuth(request)) {
+        return Response.json({ message: 'Unauthorized' }, { status: 401 });
+    }
+    const { id } = params;
+    const [result] = await pool.query('DELETE FROM Fluesse WHERE id = ?', [id]);
+    if (result.affectedRows === 0) {
+        return Response.json({ message: 'River not found' }, { status: 404 });
+    }
+    return new Response(null, { status: 204 });
+}
