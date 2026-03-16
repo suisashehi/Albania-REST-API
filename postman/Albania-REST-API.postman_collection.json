@@ -23,7 +23,8 @@
             "api",
             "fluesse"
           ]
-        }
+        },
+        "description": "Returns a list of all rivers in Albania. No authentication required."
       },
       "response": []
     },
@@ -44,7 +45,8 @@
             "fluesse",
             "1"
           ]
-        }
+        },
+        "description": "Returns a single river by its ID. Returns 404 if not found."
       },
       "response": []
     },
@@ -88,7 +90,8 @@
             "api",
             "fluesse"
           ]
-        }
+        },
+        "description": "Creates a new river. Requires Basic Auth. Returns 201 on success."
       },
       "response": []
     },
@@ -120,7 +123,8 @@
             "api",
             "fluesse"
           ]
-        }
+        },
+        "description": "Tests unauthorized access. Returns 401 without credentials."
       },
       "response": []
     },
@@ -165,7 +169,8 @@
             "fluesse",
             "1"
           ]
-        }
+        },
+        "description": "Updates an existing river by ID. Requires Basic Auth. Returns 200 on success."
       },
       "response": []
     },
@@ -198,7 +203,8 @@
             "fluesse",
             "1"
           ]
-        }
+        },
+        "description": "Tests unauthorized access. Returns 401 without credentials."
       },
       "response": []
     },
@@ -234,7 +240,8 @@
             "fluesse",
             "21"
           ]
-        }
+        },
+        "description": "Deletes a river by ID. Requires Basic Auth. Returns 204 on success."
       },
       "response": []
     },
@@ -258,7 +265,8 @@
             "fluesse",
             "21"
           ]
-        }
+        },
+        "description": "Tests unauthorized access. Returns 401 without credentials."
       },
       "response": []
     }

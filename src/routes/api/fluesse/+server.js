@@ -21,6 +21,8 @@ function checkAuth(request) {
 
 // GET /api/fluesse - public endpoint, returns all rivers
 export async function GET() {
+    // Set character encoding to utf8mb4 to support special characters
+    await pool.query("SET NAMES 'utf8mb4'");
     // Fetch all rows from the Fluesse table
     const [rows] = await pool.query('SELECT * FROM Fluesse');
     // Return the results as JSON with status 200
