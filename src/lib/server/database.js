@@ -6,7 +6,8 @@ const pool = mysql.createPool({
     user: DB_USER,
     password: DB_PASSWORD,
     database: DB_NAME,
-    port: Number(DB_PORT)
+    port: Number(DB_PORT),
+    charset: 'utf8mb4'
 });
 
 export default pool;
