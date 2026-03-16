@@ -7,8 +7,8 @@ A SvelteKit REST-API for rivers (`Fluesse`) in Albania. GET endpoints are public
 ## 🚀 Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/albania-rest-api.git
-cd albania-rest-api
+git clone https://github.com/suisashehi/Albania-REST-API.git
+cd Albania-REST-API
 npm install
 npm run dev
 ```
@@ -112,6 +112,5 @@ src/routes/api/fluesse/
 
 ## 🔗 Live URL
 
-```
-GET https://albania-rest-api.vercel.app/api/fluesse
-```
+GET https://albania-rest-api-git-main-suisashehis-projects.vercel.app/api/fluesse
+GET https://albania-rest-api-git-main-suisashehis-projects.vercel.app/api/fluesse/1
